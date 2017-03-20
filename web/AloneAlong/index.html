@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+    <script src='../js/mapbox-gl.js'></script>
+    <link href='../css/mapbox-gl.css' rel='stylesheet' />
+    <style text="text/javascript">
+    html,body{ height:100%; padding:0px; margin:0px;}
+    .wrapper{min-height:100%; position:relative}
+    .full { position:absolute; top:0;left:0; width:100%; height:100%; }
+    .menu { height: 50px; width: 100%; background-color: black; position: fixed; }
+    .behindMenu { height: 50px; width: 100%; }
+    .logo {width: 100%; height: 150px;}
+    .content {background-color: yellow;}
+    </style>
+</head>
+
+<body>
+
+    <div class="full" id='map' />
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RvcmlqaW1teSIsImEiOiJjaXg4dHdyYXowMDFsMm9zMTI1Zm4zcmxjIn0.j8xspU4oWOGgG7dZPQ-d-w';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/storijimmy/cix8y09wm009y2qlboke4l4zd',
+//			style: './css/Streets(cix8y09wm009y2qlboke4l4zd)/style.json'
+            center: [-87.61694, 41.86625],
+    		zoom: 15.99,
+    		pitch: 40,
+    		bearing: 20
+        });
+        var nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'top-left');
+
+        map.on('load', function() {
+
+		    // Geojson Data source used in vector tiles, documented at
+		    // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
+		    map.addSource("museumData", {
+		        'type': 'geojson',
+		        'data': 'https://www.mapbox.com/mapbox-gl-js/assets/data/indoor-3d-map.geojson'
+		    });
+		
+		    map.addLayer({
+		        'id': 'room-extrusion',
+		        'type': 'fill-extrusion',
+		        'source': 'museumData',
+		        'paint': {
+		            // See the Mapbox Style Spec for details on property functions
+		            // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
+		            'fill-extrusion-color': {
+		                // Get the fill-extrusion-color from the source 'color' property.
+		                'property': 'color',
+		                'type': 'identity'
+		            },
+		            'fill-extrusion-height': {
+		                // Get fill-extrusion-height from the source 'height' property.
+		                'property': 'height',
+		                'type': 'identity'
+		            },
+		            'fill-extrusion-base': {
+		                // Get fill-extrusion-base from the source 'base_height' property.
+		                'property': 'base_height',
+		                'type': 'identity'
+		            },
+		            // Make extrusions slightly opaque for see through indoor walls.
+		            'fill-extrusion-opacity': 0.5
+		        }
+		    });
+		});
+    </script>
+</body>
+</html>

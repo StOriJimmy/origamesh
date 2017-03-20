@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<title>OrigaMesh</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme-blue.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<style type="text/css">
+@font-face { font-family: "AbrilFatface"; src: url(fonts/AbrilFatface-Regular.ttf);}
+.toplogo { text-align: left; height: 160px;}
+.toptext { font-family:"AbrilFatface";text-shadow:2px 2px 2px gray;line-height:1;font-size:100px;letter-spacing:0px;color:#2eb8b8;display:block;position:absolute;left:145px;top:40px;text-decoration:none; -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.top { width:100%; z-index:2;}
+.topfix { position: fixed; top: 0;}
+.panelgreen { background-color:#ddffdd; border-left:6px solid #4CAF50; padding-left: 10px;}
+h1,h2,h3,h4,h5,h6 { font-family: "Elephant"; font-weight:400; margin: 0 0 0 0; color: #2eb8b8;}
+hr{border:0;border-top:1px solid #eee;margin:0 0;}
+p{ margin:0.1em 0;}
+</style>
+<body id="home">
+
+<!-- Side Navigation on click -->
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+</nav>
+<div class="toplogo">
+<img src="images/logo_origamesh.svg" alt="logo_origamesh" style="height: 150px;margin-top: 5px;" class="w3-hover-opacity">
+<a href="#" class="toptext" >rigaMesh</a>
+</div>
+
+<!-- Navbar -->
+<div class="top">
+ <ul class="w3-navbar w3-theme-d4 w3-left-align">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  </li>
+  <li><a href="#" class="w3-theme-d5"><i class="fa fa-home w3-margin-right"></i>OrigaMesh</a></li>
+  <li class="w3-hide-small w3-dropdown-hover w3-hover-white">
+    <a href="prox/" title="Programs">Programs <i class="fa fa-caret-down"></i></a>     
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="AloneAlong/">AloneAlong</a>
+      <a href="http://www.origamesh.com/OriGameShell">OriGameShell</a>
+      <a href="http://www.origamesh.com/FoldCut">Fold and Cut</a>
+    </div>
+  </li>
+  <li class="w3-hide-small w3-dropdown-hover w3-hover-white">
+    <a href="prox/" title="works and projects">Projects <i class="fa fa-caret-down"></i></a>     
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="http://www.origamesh.com/OrigamiWorks">OrigamiWorks</a>
+    </div>
+  </li>
+  <li class="w3-hide-small"><a href="http://www.origamesh.com/xyliu" class="w3-hover-white">About</a></li>
+  <li class="w3-hide-small w3-right"><a href="#" class="w3-hover-teal" title="Search"><i class="fa fa-search"></i></a></li>
+ </ul>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-theme-d3">
+      <li><a href="prox/#programs">Programs</a></li>
+      <li><a href="prox/#projects">Projects</a></li>
+      <li><a href="xyliu/">About</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-8 w3-animate-top">
+    <header class="w3-container w3-teal"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity" style="min-height: 400px;background-color: #fff;">
+  <img src="images/animate_triangular_mesh.svg" alt="animate_triangular_mesh.svg" style="height: 400px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">LEARN W3.CSS</button>
+  </div>
+</div>
+
+<!-- Programs Container -->
+<h2 class="panelgreen">Programs</h2>
+<div class="w3-row-padding w3-padding-32 w3-theme-l6" id="projects">
+  <div class="w3-quarter">
+  <div class="w3-card-2 w3-white">
+  <img src="images/ori_ryujin.jpg" alt="Boss" style="width:100%" class="w3-hover-opacity">
+  <div class="w3-container">
+  <h4>Alone Along</h4>
+  <hr>
+  <p>Blablabla</p>
+  </div>
+  </div>
+  </div>
+</div>
+
+<h2 class="panelgreen">Projects</h2>
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-32 w3-theme-l2" id="work">
+<div class="w3-quarter">
+<div class="w3-card-2 w3-white">
+  <img src="images/ori_ryujin.jpg" alt="Vernazza" style="width:100%">
+  <h4 style="padding: 5px 16px;">3D</h4>
+  <hr>
+  <p style="padding: 0px 16px;">Blablabla</p>
+  </div>
+</div>
+</div>
+
+<h2 class="panelgreen">Origami Gallery</h2>
+<div class="w3-row-padding w3-padding-32 w3-theme-l6" id="origallery">
+<div class="w3-quarter">
+<div class="w3-card-2 w3-white">
+  <img src="images/fjords.jpg" alt="Vernazza" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 1</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:24px;z-index:0;">
+  <i class="fa fa-plus"></i></a>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l1" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Send message if you have any problem.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Wuhan, China</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +86 13720260319</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  liuxy0319@outlook.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="form.asp" target="_blank">
+      <div class="w3-group">      
+        <label class="w3-label">Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-group">      
+        <label class="w3-label">Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-group">      
+        <label class="w3-label">Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label class="w3-validate">I Like it!</label>
+      <button type="submit" class="w3-btn w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Google Maps -->
+<div id="googleMap" style="width:100%;height:420px;"></div>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 5,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <p>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Github"><i class="fa fa-github"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  </p>
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-btn w3-theme" href="#home"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script For Side Navigation -->
+<script>
+function w3_open() {
+    var x = document.getElementById("mySidenav");
+    x.style.width = "300px";
+    x.style.textAlign = "center";
+    x.style.fontSize = "40px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+(function fixtopnav(){
+	$(window).bind("scroll",
+		function() {
+		var st = $(document).scrollTop();
+		var nt = $(".toplogo").height();
+		var sel=$(".top");
+		if (nt < st) {
+			$(".top").addClass("topfix");
+		} else {
+			$(".top").removeClass("topfix");
+		}
+	});
+})();
+</script>
+
+</body>
+</html>
